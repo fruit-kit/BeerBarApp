@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Menu-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="MenuVC" id="BYZ-38-t0r" customClass="MenuVC" customModule="BeerBar" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,7 +18,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="gJd-f8-0RV"/>
+                    <tabBarItem key="tabBarItem" title="Menu" image="menucard" catalog="system" selectedImage="menucard.fill" id="gJd-f8-0RV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -42,7 +42,7 @@
             </objects>
             <point key="canvasLocation" x="213" y="-339"/>
         </scene>
-        <!--Item-->
+        <!--Staff-->
         <scene sceneID="8tX-p4-Ig2">
             <objects>
                 <viewController storyboardIdentifier="StaffManagementVC" id="his-NB-Lvx" customClass="StaffManagementVC" customModule="BeerBar" customModuleProvider="target" sceneMemberID="viewController">
@@ -52,7 +52,7 @@
                         <viewLayoutGuide key="safeArea" id="cjX-CH-Gn7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="fo2-9N-WWx"/>
+                    <tabBarItem key="tabBarItem" title="Staff" image="person.2.badge.gearshape" catalog="system" selectedImage="person.2.badge.gearshape.fill" id="fo2-9N-WWx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VhX-MG-kWc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -60,6 +60,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="menucard" catalog="system" width="108" height="128"/>
+        <image name="menucard.fill" catalog="system" width="105" height="128"/>
+        <image name="person.2.badge.gearshape" catalog="system" width="128" height="91"/>
+        <image name="person.2.badge.gearshape.fill" catalog="system" width="128" height="90"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
