@@ -8,7 +8,24 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Menu-->
+        <!--Item-->
+        <scene sceneID="mXS-yz-wxp">
+            <objects>
+                <navigationController id="bHp-xh-Och" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Cni-Fa-wbq"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lZ9-nR-oT4">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="CDb-tQ-chb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VpD-kU-N8J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="268" y="-668"/>
+        </scene>
+        <!--Billy Bar-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="MenuVC" id="BYZ-38-t0r" customClass="MenuVC" customModule="BeerBar" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,10 +36,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Menu" image="menucard" catalog="system" selectedImage="menucard.fill" id="gJd-f8-0RV"/>
+                    <navigationItem key="navigationItem" title="Billy Bar" id="Bve-kF-npb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="998" y="-667"/>
+            <point key="canvasLocation" x="1044" y="-668"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="79B-Qf-Ptb">
@@ -34,15 +52,32 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="7rx-PA-VRW"/>
-                        <segue destination="his-NB-Lvx" kind="relationship" relationship="viewControllers" id="KWs-Sb-34U"/>
+                        <segue destination="bHp-xh-Och" kind="relationship" relationship="viewControllers" id="IwI-Df-JHq"/>
+                        <segue destination="Hel-tu-eFh" kind="relationship" relationship="viewControllers" id="XVb-xU-d3A"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jIo-DS-pGq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="213" y="-339"/>
+            <point key="canvasLocation" x="-511" y="-337"/>
         </scene>
-        <!--Staff-->
+        <!--Item-->
+        <scene sceneID="rFP-It-JaG">
+            <objects>
+                <navigationController id="Hel-tu-eFh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Tie-S4-3Pn"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dsb-Ib-DKw">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="his-NB-Lvx" kind="relationship" relationship="rootViewController" id="fu8-pB-xLK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R6k-iR-nmy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="268" y="4"/>
+        </scene>
+        <!--Staff Management-->
         <scene sceneID="8tX-p4-Ig2">
             <objects>
                 <viewController storyboardIdentifier="StaffManagementVC" id="his-NB-Lvx" customClass="StaffManagementVC" customModule="BeerBar" customModuleProvider="target" sceneMemberID="viewController">
@@ -51,7 +86,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Guz-y1-uO5">
-                                <rect key="frame" x="0.0" y="59" width="393" height="130"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="130"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uaO-Vo-mG4">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="69"/>
@@ -142,6 +177,7 @@ $0.00</string>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Staff" image="person.2.badge.gearshape" catalog="system" selectedImage="person.2.badge.gearshape.fill" id="fo2-9N-WWx"/>
+                    <navigationItem key="navigationItem" title="Staff Management" id="9G7-QJ-TwM"/>
                     <connections>
                         <outlet property="newShiftButton" destination="Aee-oP-i61" id="Evg-4k-BdS"/>
                         <outlet property="resetButton" destination="GQV-fS-TqN" id="lYF-AK-3ij"/>
@@ -151,7 +187,7 @@ $0.00</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VhX-MG-kWc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="997.70992366412213" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="1044" y="4"/>
         </scene>
     </scenes>
     <resources>
