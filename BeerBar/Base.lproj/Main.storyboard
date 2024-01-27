@@ -168,14 +168,15 @@ $0.00</string>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GDC-8t-xwb">
-                                <rect key="frame" x="121.66666666666669" y="708" width="150" height="45"/>
+                                <rect key="frame" x="120.66666666666669" y="708" width="152" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="Jk8-cS-bVo"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="About developer"/>
+                                <buttonConfiguration key="configuration" style="gray" title="About Developer"/>
                                 <connections>
                                     <action selector="aboutDeveloperButtonPressed:" destination="his-NB-Lvx" eventType="touchUpInside" id="mk3-vZ-yOu"/>
+                                    <segue destination="6jU-eb-rnT" kind="show" id="e8A-Uw-g8B"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -202,6 +203,22 @@ $0.00</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VhX-MG-kWc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1044" y="4"/>
+        </scene>
+        <!--About Developer-->
+        <scene sceneID="J0c-YN-sRk">
+            <objects>
+                <viewController storyboardIdentifier="DeveloperInfoVC" id="6jU-eb-rnT" customClass="DeveloperInfoVC" customModule="BeerBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ptX-Un-Zji">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ozN-kX-x5q"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="About Developer" id="GId-GJ-Udi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XjD-db-7CK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1819" y="4"/>
         </scene>
     </scenes>
     <resources>
