@@ -15,7 +15,6 @@ class StaffManagementVC: UIViewController {
     @IBOutlet weak var newShiftButton: UIButton!
     @IBOutlet weak var totalRevenueLabel: UILabel!
     @IBOutlet weak var resetButton: UIButton!
-    
     @IBOutlet weak var aboutDeveloperButton: UIButton!
     
     // MARK: - View Lifecycle
@@ -26,6 +25,8 @@ class StaffManagementVC: UIViewController {
         setupButtons()
         super.viewDidLoad()
     }
+    
+    // MARK: - Private Methods
     
     private func setupLabels() {
         
