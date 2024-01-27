@@ -211,10 +211,47 @@ $0.00</string>
                     <view key="view" contentMode="scaleToFill" id="ptX-Un-Zji">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YYz-ds-ev7">
+                                <rect key="frame" x="0.0" y="103" width="393" height="274"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DgH-qS-lSi">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="274"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q2E-At-3kv">
+                                                <rect key="frame" x="71.666666666666686" y="16" width="250" height="250"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="250" id="Ead-r9-PRT"/>
+                                                    <constraint firstAttribute="width" constant="250" id="cOP-GX-yFK"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="q2E-At-3kv" firstAttribute="centerX" secondItem="DgH-qS-lSi" secondAttribute="centerX" id="imq-hg-wFg"/>
+                                            <constraint firstAttribute="bottom" secondItem="q2E-At-3kv" secondAttribute="bottom" constant="8" id="pEE-dV-UhC"/>
+                                            <constraint firstItem="q2E-At-3kv" firstAttribute="top" secondItem="DgH-qS-lSi" secondAttribute="top" constant="16" id="sOS-Uj-Z5I"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="DgH-qS-lSi" firstAttribute="leading" secondItem="YYz-ds-ev7" secondAttribute="leading" id="a2f-0W-IAE"/>
+                                    <constraint firstAttribute="trailing" secondItem="DgH-qS-lSi" secondAttribute="trailing" id="tli-nz-3Jy"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ozN-kX-x5q"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ozN-kX-x5q" firstAttribute="trailing" secondItem="YYz-ds-ev7" secondAttribute="trailing" id="foE-xP-P5l"/>
+                            <constraint firstItem="YYz-ds-ev7" firstAttribute="leading" secondItem="ozN-kX-x5q" secondAttribute="leading" id="iGz-wb-pr4"/>
+                            <constraint firstItem="YYz-ds-ev7" firstAttribute="top" secondItem="ozN-kX-x5q" secondAttribute="top" id="sU8-tp-qJ8"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="About Developer" id="GId-GJ-Udi"/>
+                    <connections>
+                        <outlet property="developerImageView" destination="q2E-At-3kv" id="LyM-NZ-A2O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XjD-db-7CK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

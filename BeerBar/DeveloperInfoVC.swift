@@ -8,22 +8,28 @@
 import UIKit
 
 class DeveloperInfoVC: UIViewController {
-
+    
+    // MARK: - Outlets
+    
+    @IBOutlet weak var developerImageView: UIImageView!
+    
+    // MARK: - View Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        setupDeveloperImageView()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - Private Methods
+    
+    private func setupDeveloperImageView() {
+        
+        let developerImage = UIImage(named: "developer-icon")
+        self.developerImageView.image = developerImage
+        self.developerImageView.layer.cornerRadius = self.developerImageView.bounds.width / 2
+        self.developerImageView.layer.borderWidth = 2
+        self.developerImageView.layer.borderColor = UIColor.systemBlue.cgColor
     }
-    */
-
+    
 }
