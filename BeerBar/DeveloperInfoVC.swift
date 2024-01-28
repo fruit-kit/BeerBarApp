@@ -13,12 +13,15 @@ class DeveloperInfoVC: UIViewController {
     
     @IBOutlet weak var developerImageView: UIImageView!
     
+    @IBOutlet weak var developerNameLabel: UILabel!
+    
     // MARK: - View Lifecycle
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         
         setupDeveloperImageView()
+        setupDeveloperNameLabel()
+        super.viewDidLoad()
     }
     
     // MARK: - Private Methods
@@ -30,6 +33,12 @@ class DeveloperInfoVC: UIViewController {
         self.developerImageView.layer.cornerRadius = self.developerImageView.bounds.width / 2
         self.developerImageView.layer.borderWidth = 2
         self.developerImageView.layer.borderColor = UIColor.systemBlue.cgColor
+    }
+    
+    private func setupDeveloperNameLabel() {
+        
+        self.developerNameLabel.text = "Robert Kotrutsa"
+        self.developerNameLabel.font = .boldSystemFont(ofSize: 25)
     }
     
 }

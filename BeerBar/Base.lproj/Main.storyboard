@@ -213,7 +213,7 @@ $0.00</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YYz-ds-ev7">
-                                <rect key="frame" x="0.0" y="103" width="393" height="274"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="335"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DgH-qS-lSi">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="274"/>
@@ -233,8 +233,30 @@ $0.00</string>
                                             <constraint firstItem="q2E-At-3kv" firstAttribute="top" secondItem="DgH-qS-lSi" secondAttribute="top" constant="16" id="sOS-Uj-Z5I"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zG3-aS-RIR">
+                                        <rect key="frame" x="0.0" y="274" width="393" height="61"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developer name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qME-Xl-lT3">
+                                                <rect key="frame" x="134.66666666666666" y="8" width="123.99999999999997" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="E3R-ie-vJS"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="qME-Xl-lT3" firstAttribute="centerX" secondItem="zG3-aS-RIR" secondAttribute="centerX" id="RCJ-UW-B51"/>
+                                            <constraint firstItem="qME-Xl-lT3" firstAttribute="top" secondItem="zG3-aS-RIR" secondAttribute="top" constant="8" id="caQ-zg-p1Q"/>
+                                            <constraint firstAttribute="bottom" secondItem="qME-Xl-lT3" secondAttribute="bottom" constant="8" id="ngR-2o-8ZI"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="zG3-aS-RIR" firstAttribute="leading" secondItem="YYz-ds-ev7" secondAttribute="leading" id="1XM-rE-lTb"/>
+                                    <constraint firstAttribute="trailing" secondItem="zG3-aS-RIR" secondAttribute="trailing" id="WG9-HK-PuC"/>
                                     <constraint firstItem="DgH-qS-lSi" firstAttribute="leading" secondItem="YYz-ds-ev7" secondAttribute="leading" id="a2f-0W-IAE"/>
                                     <constraint firstAttribute="trailing" secondItem="DgH-qS-lSi" secondAttribute="trailing" id="tli-nz-3Jy"/>
                                 </constraints>
@@ -251,6 +273,7 @@ $0.00</string>
                     <navigationItem key="navigationItem" title="About Developer" id="GId-GJ-Udi"/>
                     <connections>
                         <outlet property="developerImageView" destination="q2E-At-3kv" id="LyM-NZ-A2O"/>
+                        <outlet property="developerNameLabel" destination="qME-Xl-lT3" id="hSu-aM-pZr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XjD-db-7CK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
