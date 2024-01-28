@@ -213,7 +213,7 @@ $0.00</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YYz-ds-ev7">
-                                <rect key="frame" x="0.0" y="103" width="393" height="335"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="376"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DgH-qS-lSi">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="274"/>
@@ -253,13 +253,27 @@ $0.00</string>
                                             <constraint firstAttribute="bottom" secondItem="qME-Xl-lT3" secondAttribute="bottom" constant="8" id="ngR-2o-8ZI"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WTF-vW-UBw">
+                                        <rect key="frame" x="0.0" y="335" width="393" height="41"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS Developer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRm-yK-4v2">
+                                                <rect key="frame" x="142" y="8" width="109" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="cak-Xp-V33"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="JRm-yK-4v2" firstAttribute="top" secondItem="WTF-vW-UBw" secondAttribute="top" constant="8" id="LFW-iV-c5Z"/>
+                                            <constraint firstItem="JRm-yK-4v2" firstAttribute="centerX" secondItem="WTF-vW-UBw" secondAttribute="centerX" id="LxW-Qb-p5h"/>
+                                            <constraint firstAttribute="bottom" secondItem="JRm-yK-4v2" secondAttribute="bottom" constant="8" id="Pve-Ui-g6A"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="zG3-aS-RIR" firstAttribute="leading" secondItem="YYz-ds-ev7" secondAttribute="leading" id="1XM-rE-lTb"/>
-                                    <constraint firstAttribute="trailing" secondItem="zG3-aS-RIR" secondAttribute="trailing" id="WG9-HK-PuC"/>
-                                    <constraint firstItem="DgH-qS-lSi" firstAttribute="leading" secondItem="YYz-ds-ev7" secondAttribute="leading" id="a2f-0W-IAE"/>
-                                    <constraint firstAttribute="trailing" secondItem="DgH-qS-lSi" secondAttribute="trailing" id="tli-nz-3Jy"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ozN-kX-x5q"/>
@@ -272,6 +286,7 @@ $0.00</string>
                     </view>
                     <navigationItem key="navigationItem" title="About Developer" id="GId-GJ-Udi"/>
                     <connections>
+                        <outlet property="developerDescriptionLabel" destination="JRm-yK-4v2" id="IDB-aF-ZW6"/>
                         <outlet property="developerImageView" destination="q2E-At-3kv" id="LyM-NZ-A2O"/>
                         <outlet property="developerNameLabel" destination="qME-Xl-lT3" id="hSu-aM-pZr"/>
                     </connections>
