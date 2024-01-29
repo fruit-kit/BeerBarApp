@@ -14,6 +14,7 @@ class DeveloperInfoVC: UIViewController {
     @IBOutlet weak var developerImageView: UIImageView!
     @IBOutlet weak var developerNameLabel: UILabel!
     @IBOutlet weak var developerDescriptionLabel: UILabel!
+    @IBOutlet weak var telegramButton: UIButton!
     
     // MARK: - View Lifecycle
     
@@ -22,6 +23,7 @@ class DeveloperInfoVC: UIViewController {
         setupDeveloperImageView()
         setupDeveloperNameLabel()
         setupDeveloperDescriptionLabel()
+        setupTelegramButton()
         super.viewDidLoad()
     }
     
@@ -47,4 +49,19 @@ class DeveloperInfoVC: UIViewController {
         self.developerDescriptionLabel.text = "iOS Developer👨‍💻"
         self.developerDescriptionLabel.font = .systemFont(ofSize: 18)
     }
+    
+    private func setupTelegramButton() {
+        
+        self.telegramButton.setTitle("✍️ Telegram", for: .normal)
+    }
+    
+    // MARK: - Actions
+    
+    @IBAction func telegramButtonPressed(_ sender: UIButton) {
+        
+        if let telegramURL = URL(string: "tg://resolve?domain=fruitkit") {
+            UIApplication.shared.open(telegramURL)
+        }
+    }
+    
 }
