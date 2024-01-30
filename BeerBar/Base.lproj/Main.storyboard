@@ -8,17 +8,17 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Menu-->
         <scene sceneID="mXS-yz-wxp">
             <objects>
                 <navigationController id="bHp-xh-Och" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Cni-Fa-wbq"/>
+                    <tabBarItem key="tabBarItem" title="Menu" image="menucard" catalog="system" selectedImage="menucard.fill" id="Cni-Fa-wbq"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lZ9-nR-oT4">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="CDb-tQ-chb"/>
+                        <segue destination="EdW-lu-kL7" kind="relationship" relationship="rootViewController" id="DWh-7g-Huf"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VpD-kU-N8J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -26,19 +26,31 @@
             <point key="canvasLocation" x="268" y="-668"/>
         </scene>
         <!--Billy Bar-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="ryl-7h-V1U">
             <objects>
-                <viewController storyboardIdentifier="MenuVC" id="BYZ-38-t0r" customClass="MenuVC" customModule="BeerBar" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tableViewController storyboardIdentifier="MenuTableVC" id="EdW-lu-kL7" customClass="MenuTableVC" customModule="BeerBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="76X-QQ-UBl">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Menu" image="menucard" catalog="system" selectedImage="menucard.fill" id="gJd-f8-0RV"/>
-                    <navigationItem key="navigationItem" title="Billy Bar" id="Bve-kF-npb"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Xab-Vd-YWV">
+                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xab-Vd-YWV" id="3YA-Uq-Kar">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="EdW-lu-kL7" id="1tq-kD-IGQ"/>
+                            <outlet property="delegate" destination="EdW-lu-kL7" id="4u6-Ws-Rn1"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Billy Bar" id="QFI-1L-ZYU"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7lv-Np-X0m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1044" y="-668"/>
         </scene>
