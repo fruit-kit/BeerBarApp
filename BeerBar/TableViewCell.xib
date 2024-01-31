@@ -10,17 +10,17 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="62" id="KGk-i7-Jjw" customClass="TableViewCell" customModule="BeerBar" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="62"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="113" id="KGk-i7-Jjw" customClass="TableViewCell" customModule="BeerBar" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="113"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="62"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="113"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beer Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Asd-0A-3hi">
-                        <rect key="frame" x="16" y="8" width="89.333333333333329" height="20"/>
+                        <rect key="frame" x="16" y="8" width="247" height="69"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="20" id="FQA-mO-DSB"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="FQA-mO-DSB"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                         <nil key="textColor"/>
@@ -28,16 +28,16 @@
                         <size key="shadowOffset" width="0.0" height="0.0"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remainder: 0.33 L" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1x-1Z-QUy">
-                        <rect key="frame" x="16.000000000000007" y="36" width="124.66666666666669" height="18"/>
+                        <rect key="frame" x="16" y="85" width="247" height="20"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="18" id="awT-TO-UpW"/>
+                            <constraint firstAttribute="height" constant="20" id="awT-TO-UpW"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ssU-7U-0oC">
-                        <rect key="frame" x="279" y="20.666666666666671" width="25" height="21.333333333333329"/>
+                        <rect key="frame" x="279" y="46" width="25" height="21.333333333333329"/>
                         <color key="tintColor" systemColor="systemGray3Color"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="ssU-7U-0oC" secondAttribute="height" id="PAf-c0-MVD"/>
@@ -50,8 +50,10 @@
                     <constraint firstAttribute="trailing" secondItem="ssU-7U-0oC" secondAttribute="trailing" constant="16" id="AFW-rk-gen"/>
                     <constraint firstItem="G1x-1Z-QUy" firstAttribute="top" secondItem="Asd-0A-3hi" secondAttribute="bottom" constant="8" id="B1h-8V-jc4"/>
                     <constraint firstItem="Asd-0A-3hi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="auH-Hc-PIV"/>
+                    <constraint firstItem="ssU-7U-0oC" firstAttribute="leading" secondItem="Asd-0A-3hi" secondAttribute="trailing" constant="16" id="bsq-eg-0oA"/>
                     <constraint firstItem="G1x-1Z-QUy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="g2u-zw-Elf"/>
                     <constraint firstAttribute="bottom" secondItem="G1x-1Z-QUy" secondAttribute="bottom" constant="8" id="ie2-r9-M6u"/>
+                    <constraint firstItem="ssU-7U-0oC" firstAttribute="leading" secondItem="G1x-1Z-QUy" secondAttribute="trailing" constant="16" id="mlL-AA-HQ3"/>
                     <constraint firstItem="ssU-7U-0oC" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="pnP-mH-NLh"/>
                 </constraints>
             </tableViewCellContentView>
@@ -60,13 +62,13 @@
                 <outlet property="beerLeftLabel" destination="G1x-1Z-QUy" id="YiO-ak-0yr"/>
                 <outlet property="beerNameLabel" destination="Asd-0A-3hi" id="iEL-Ov-w2S"/>
             </connections>
-            <point key="canvasLocation" x="21.374045801526716" y="26.760563380281692"/>
+            <point key="canvasLocation" x="21.374045801526716" y="44.718309859154935"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
         <systemColor name="systemGray3Color">
-            <color red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
