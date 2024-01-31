@@ -11,6 +11,7 @@
 		CC2933232B691EBF00B199CD /* MenuTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2933222B691EBF00B199CD /* MenuTableVC.swift */; };
 		CC2933302B69505700B199CD /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC29332E2B69505700B199CD /* TableViewCell.swift */; };
 		CC2933312B69505700B199CD /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC29332F2B69505700B199CD /* TableViewCell.xib */; };
+		CC470E562B6A34DB002E4A85 /* BeerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC470E552B6A34DB002E4A85 /* BeerModel.swift */; };
 		CC96D1842B5EA56200B5D46C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC96D1832B5EA56200B5D46C /* AppDelegate.swift */; };
 		CC96D1862B5EA56200B5D46C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC96D1852B5EA56200B5D46C /* SceneDelegate.swift */; };
 		CC96D18B2B5EA56200B5D46C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC96D1892B5EA56200B5D46C /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 		CC2933222B691EBF00B199CD /* MenuTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableVC.swift; sourceTree = "<group>"; };
 		CC29332E2B69505700B199CD /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		CC29332F2B69505700B199CD /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		CC470E552B6A34DB002E4A85 /* BeerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerModel.swift; sourceTree = "<group>"; };
 		CC96D1802B5EA56200B5D46C /* BeerBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeerBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC96D1832B5EA56200B5D46C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC96D1852B5EA56200B5D46C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				CC96D18C2B5EA56300B5D46C /* Assets.xcassets */,
 				CC96D18E2B5EA56300B5D46C /* LaunchScreen.storyboard */,
 				CC96D1912B5EA56300B5D46C /* Info.plist */,
+				CC470E552B6A34DB002E4A85 /* BeerModel.swift */,
 			);
 			path = BeerBar;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 				CC2933302B69505700B199CD /* TableViewCell.swift in Sources */,
 				CC2933232B691EBF00B199CD /* MenuTableVC.swift in Sources */,
 				CC96D1862B5EA56200B5D46C /* SceneDelegate.swift in Sources */,
+				CC470E562B6A34DB002E4A85 /* BeerModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
