@@ -71,4 +71,17 @@ class MenuTableVC: UITableViewController {
         return cell
     }
     
+    // MARK: - Table view delegate
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        
+        guard let destination = storyboard.instantiateViewController(withIdentifier: "BuyBeerVC") as? BuyBeerVC else {
+            return
+        }
+        
+        self.navigationController?.pushViewController(destination, animated: true)
+    }
+    
 }

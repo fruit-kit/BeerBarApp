@@ -49,10 +49,29 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Billy Bar" id="QFI-1L-ZYU"/>
+                    <connections>
+                        <segue destination="MGB-b1-Qvm" kind="show" id="ZCY-NJ-gTv"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7lv-Np-X0m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1044" y="-668"/>
+        </scene>
+        <!--Buy Beer-->
+        <scene sceneID="J4i-W1-lNR">
+            <objects>
+                <viewController storyboardIdentifier="BuyBeerVC" id="MGB-b1-Qvm" customClass="BuyBeerVC" customModule="BeerBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xiE-Fu-Ikg">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="dZW-Nt-V52"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Buy Beer" id="VoB-yE-IiO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eZH-V3-Yat" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1818" y="-668"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="79B-Qf-Ptb">
