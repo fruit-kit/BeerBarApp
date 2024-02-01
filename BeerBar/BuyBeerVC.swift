@@ -15,18 +15,31 @@ class BuyBeerVC: UIViewController {
     
     // MARK: - Outlets
     
-    @IBOutlet weak var beerNameLabe: UILabel!
+    @IBOutlet weak var beerNameLabel: UILabel!
+    
+    @IBOutlet weak var beerTypeLabel: UILabel!
+    
+    // MARK: - View Lifecycle
     
     override func viewDidLoad() {
 
         setupBeerNameLabel()
+        setupBeerTypeLabel()
         super.viewDidLoad()
     }
 
+    // MARK: - Private Methods
+    
     private func setupBeerNameLabel() {
         
-        self.beerNameLabe.text = "\(self.defaultBeerInfo.country) \(self.defaultBeerInfo.name)"
-        self.beerNameLabe.font = .boldSystemFont(ofSize: 25)
+        self.beerNameLabel.text = "\(self.defaultBeerInfo.country) \(self.defaultBeerInfo.name)"
+        self.beerNameLabel.font = .boldSystemFont(ofSize: 25)
+    }
+    
+    private func setupBeerTypeLabel() {
+        
+        self.beerTypeLabel.text = "Type: \(self.defaultBeerInfo.type)"
+        self.beerTypeLabel.font = .systemFont(ofSize: 18)
     }
     
 }
