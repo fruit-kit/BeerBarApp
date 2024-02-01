@@ -64,10 +64,45 @@
                     <view key="view" contentMode="scaleToFill" id="xiE-Fu-Ikg">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Wd8-Bb-mda">
+                                <rect key="frame" x="0.0" y="103" width="393" height="69"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lwy-wp-5EC">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="69"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJM-4z-V1K">
+                                                <rect key="frame" x="176" y="16" width="41.333333333333343" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="KZ0-Ju-7RF"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="DJM-4z-V1K" firstAttribute="top" secondItem="Lwy-wp-5EC" secondAttribute="top" constant="16" id="Dtq-sO-cDA"/>
+                                            <constraint firstAttribute="bottom" secondItem="DJM-4z-V1K" secondAttribute="bottom" constant="8" id="LmM-ae-tvb"/>
+                                            <constraint firstItem="DJM-4z-V1K" firstAttribute="centerX" secondItem="Lwy-wp-5EC" secondAttribute="centerX" id="x4D-nq-obG"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="dZW-Nt-V52"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dZW-Nt-V52" firstAttribute="trailing" secondItem="Wd8-Bb-mda" secondAttribute="trailing" id="5J1-pF-zzy"/>
+                            <constraint firstItem="Wd8-Bb-mda" firstAttribute="top" secondItem="dZW-Nt-V52" secondAttribute="top" id="Z27-IZ-b9e"/>
+                            <constraint firstItem="Wd8-Bb-mda" firstAttribute="leading" secondItem="dZW-Nt-V52" secondAttribute="leading" id="p8p-6C-5xQ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Buy Beer" id="VoB-yE-IiO"/>
+                    <connections>
+                        <outlet property="beerNameLabe" destination="DJM-4z-V1K" id="bxL-o5-6y5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eZH-V3-Yat" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

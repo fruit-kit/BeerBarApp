@@ -13,7 +13,7 @@ struct Beer {
     let country: String
     let type: BeerType
     let prices: (Decimal, Decimal, Decimal)
-    let image: UIImage
+    let image: UIImage?
     let volume: Double
 }
 

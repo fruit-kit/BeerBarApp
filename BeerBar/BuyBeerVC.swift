@@ -8,22 +8,25 @@
 import UIKit
 
 class BuyBeerVC: UIViewController {
-
+    
+    // MARK: - Properties
+    
+    var defaultBeerInfo: Beer = Beer(name: "Name N/A", country: "Country N/A", type: BeerType.dark, prices: (0.0, 0.0, 0.0), image: nil, volume: 0.0)
+    
+    // MARK: - Outlets
+    
+    @IBOutlet weak var beerNameLabe: UILabel!
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupBeerNameLabel()
+        super.viewDidLoad()
+    }
+
+    private func setupBeerNameLabel() {
+        
+        self.beerNameLabe.text = "\(self.defaultBeerInfo.country) \(self.defaultBeerInfo.name)"
+        self.beerNameLabe.font = .boldSystemFont(ofSize: 25)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
