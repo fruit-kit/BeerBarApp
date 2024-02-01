@@ -66,7 +66,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Wd8-Bb-mda">
-                                <rect key="frame" x="0.0" y="103" width="393" height="105"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="141"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lwy-wp-5EC">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="69"/>
@@ -108,6 +108,26 @@
                                             <constraint firstItem="e9v-tV-NOi" firstAttribute="top" secondItem="Tob-zp-Lwq" secondAttribute="top" constant="8" id="yCI-IZ-rFL"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Lj-oG-STe">
+                                        <rect key="frame" x="0.0" y="105" width="393" height="36"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1u-Px-bfg">
+                                                <rect key="frame" x="176" y="8" width="41.333333333333343" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="yYS-ws-ujd"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="A1u-Px-bfg" firstAttribute="top" secondItem="0Lj-oG-STe" secondAttribute="top" constant="8" id="JGX-G6-vfC"/>
+                                            <constraint firstItem="A1u-Px-bfg" firstAttribute="centerX" secondItem="0Lj-oG-STe" secondAttribute="centerX" id="e3a-Jv-sb0"/>
+                                            <constraint firstAttribute="bottom" secondItem="A1u-Px-bfg" secondAttribute="bottom" constant="8" id="jl9-BL-57Y"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -121,6 +141,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Buy Beer" id="VoB-yE-IiO"/>
                     <connections>
+                        <outlet property="beerLeftLabel" destination="A1u-Px-bfg" id="auA-Fo-Iyn"/>
                         <outlet property="beerNameLabel" destination="DJM-4z-V1K" id="67V-MU-hkG"/>
                         <outlet property="beerTypeLabel" destination="e9v-tV-NOi" id="GST-pD-6MV"/>
                     </connections>

@@ -19,12 +19,15 @@ class BuyBeerVC: UIViewController {
     
     @IBOutlet weak var beerTypeLabel: UILabel!
     
+    @IBOutlet weak var beerLeftLabel: UILabel!
+    
     // MARK: - View Lifecycle
     
     override func viewDidLoad() {
 
         setupBeerNameLabel()
         setupBeerTypeLabel()
+        setupBeerLeftLabel()
         super.viewDidLoad()
     }
 
@@ -40,6 +43,12 @@ class BuyBeerVC: UIViewController {
         
         self.beerTypeLabel.text = "Type: \(self.defaultBeerInfo.type)"
         self.beerTypeLabel.font = .systemFont(ofSize: 18)
+    }
+    
+    private func setupBeerLeftLabel() {
+        
+        self.beerLeftLabel.text = "Remainder: \(self.defaultBeerInfo.volume) L"
+        self.beerLeftLabel.font = .systemFont(ofSize: 18)
     }
     
 }
