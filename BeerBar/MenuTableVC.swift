@@ -86,6 +86,7 @@ class MenuTableVC: UITableViewController {
         destination.defaultBeerInfo.country = self.beers[index].country
         destination.defaultBeerInfo.name = self.beers[index].name
         destination.defaultBeerInfo.type = self.beers[index].type
+        destination.defaultBeerInfo.volume = self.beers[index].volume
         
         self.navigationController?.pushViewController(destination, animated: true)
     }

@@ -14,7 +14,7 @@ struct Beer {
     var type: BeerType
     let prices: (Decimal, Decimal, Decimal)
     let image: UIImage?
-    let volume: Double
+    var volume: Double
 }
 
 enum BeerType {
