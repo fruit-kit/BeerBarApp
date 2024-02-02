@@ -11,7 +11,7 @@ class BuyBeerVC: UIViewController {
     
     // MARK: - Properties
     
-    var defaultBeerInfo: Beer = Beer(name: "Name N/A", country: "Country N/A", type: BeerType.dark, prices: (0.0, 0.0, 0.0), image: nil, volume: 0.0)
+    var defaultBeerInfo: Beer = Beer(name: "Name N/A", country: "Country N/A", type: BeerType.dark, prices: (0.0, 0.0, 0.0), image: UIImage(named: "no-image-icon"), volume: 0.0)
     
     // MARK: - Outlets
     
@@ -29,6 +29,7 @@ class BuyBeerVC: UIViewController {
         setupBeerNameLabel()
         setupBeerTypeLabel()
         setupBeerLeftLabel()
+        setupBeerImage()
         setupSelectBeerVolumeSegmentControl()
         setupBuyBeerButton()
         super.viewDidLoad()
@@ -62,6 +63,11 @@ class BuyBeerVC: UIViewController {
         
         self.beerLeftLabel.text = "Remainder: \(self.defaultBeerInfo.volume) L"
         self.beerLeftLabel.font = .systemFont(ofSize: 18)
+    }
+    
+    private func setupBeerImage() {
+        
+        self.beerImageView.image = self.defaultBeerInfo.image
     }
     
     private func setupSelectBeerVolumeSegmentControl() {
