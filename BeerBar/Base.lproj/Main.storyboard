@@ -66,7 +66,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Wd8-Bb-mda">
-                                <rect key="frame" x="0.0" y="103" width="393" height="529"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="565"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lwy-wp-5EC">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="69"/>
@@ -169,8 +169,28 @@
                                             <constraint firstItem="8PI-eP-6IE" firstAttribute="top" secondItem="iyU-VD-LmB" secondAttribute="top" constant="8" id="XkA-eT-yNn"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eaW-Xw-GoC">
+                                        <rect key="frame" x="0.0" y="468" width="393" height="36"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84J-mc-LKM">
+                                                <rect key="frame" x="176" y="8" width="41.333333333333343" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="GhO-eY-PvJ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="84J-mc-LKM" secondAttribute="bottom" constant="8" id="PWq-NG-ozh"/>
+                                            <constraint firstItem="84J-mc-LKM" firstAttribute="top" secondItem="eaW-Xw-GoC" secondAttribute="top" constant="8" id="t4n-uR-BN8"/>
+                                            <constraint firstItem="84J-mc-LKM" firstAttribute="centerX" secondItem="eaW-Xw-GoC" secondAttribute="centerX" id="yzm-US-D6z"/>
+                                        </constraints>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ckS-CF-pos">
-                                        <rect key="frame" x="0.0" y="468" width="393" height="61"/>
+                                        <rect key="frame" x="0.0" y="504" width="393" height="61"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S6U-IG-PGQ">
                                                 <rect key="frame" x="131.66666666666666" y="8" width="129.99999999999997" height="45"/>
@@ -213,6 +233,7 @@
                         <outlet property="beerNameLabel" destination="DJM-4z-V1K" id="67V-MU-hkG"/>
                         <outlet property="beerTypeLabel" destination="e9v-tV-NOi" id="GST-pD-6MV"/>
                         <outlet property="buyBeerButton" destination="S6U-IG-PGQ" id="DLc-1Z-W6D"/>
+                        <outlet property="currentPriceVolumeLabel" destination="84J-mc-LKM" id="YNW-T4-olp"/>
                         <outlet property="selectBeerVolumeSegmentControl" destination="8PI-eP-6IE" id="94p-ea-r0Z"/>
                     </connections>
                 </viewController>
