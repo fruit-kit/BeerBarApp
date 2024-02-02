@@ -21,6 +21,7 @@ class BuyBeerVC: UIViewController {
     @IBOutlet weak var beerImageView: UIImageView!
     @IBOutlet weak var selectBeerVolumeSegmentControl: UISegmentedControl!
     
+    @IBOutlet weak var buyBeerButton: UIButton!
     // MARK: - View Lifecycle
     
     override func viewDidLoad() {
@@ -29,12 +30,17 @@ class BuyBeerVC: UIViewController {
         setupBeerTypeLabel()
         setupBeerLeftLabel()
         setupSelectBeerVolumeSegmentControl()
+        setupBuyBeerButton()
         super.viewDidLoad()
     }
     
     // MARK: - Actions
     
     @IBAction func selectBeerVolumePressed(_ sender: UISegmentedControl) {
+        
+    }
+    
+    @IBAction func buyBeerButtonPressed(_ sender: UIButton) {
         
     }
     
@@ -63,6 +69,11 @@ class BuyBeerVC: UIViewController {
         self.selectBeerVolumeSegmentControl.setTitle("0.33 L", forSegmentAt: 0)
         self.selectBeerVolumeSegmentControl.setTitle("0.5 L", forSegmentAt: 1)
         self.selectBeerVolumeSegmentControl.setTitle("1 L", forSegmentAt: 2)
+    }
+    
+    private func setupBuyBeerButton() {
+        
+        self.buyBeerButton.setTitle("Buy 🍻", for: .normal)
     }
     
 }

@@ -66,7 +66,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Wd8-Bb-mda">
-                                <rect key="frame" x="0.0" y="103" width="393" height="468"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="529"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lwy-wp-5EC">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="69"/>
@@ -171,6 +171,29 @@
                                             <constraint firstItem="8PI-eP-6IE" firstAttribute="top" secondItem="iyU-VD-LmB" secondAttribute="top" constant="8" id="XkA-eT-yNn"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ckS-CF-pos">
+                                        <rect key="frame" x="0.0" y="468" width="393" height="61"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S6U-IG-PGQ">
+                                                <rect key="frame" x="131.66666666666666" y="8" width="129.99999999999997" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="HZU-ea-z8U"/>
+                                                    <constraint firstAttribute="width" constant="130" id="YXf-xs-zKF"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Buy 🍻"/>
+                                                <connections>
+                                                    <action selector="buyBeerButtonPressed:" destination="MGB-b1-Qvm" eventType="touchUpInside" id="NAN-gt-GcN"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="S6U-IG-PGQ" firstAttribute="top" secondItem="ckS-CF-pos" secondAttribute="top" constant="8" id="ToK-uQ-P86"/>
+                                            <constraint firstAttribute="bottom" secondItem="S6U-IG-PGQ" secondAttribute="bottom" constant="8" id="e7T-Ea-DQu"/>
+                                            <constraint firstItem="S6U-IG-PGQ" firstAttribute="centerX" secondItem="ckS-CF-pos" secondAttribute="centerX" id="nSx-AV-Nh9"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="8PI-eP-6IE" firstAttribute="width" secondItem="Bpb-bb-1Ka" secondAttribute="width" id="Mou-jq-ib7"/>
@@ -191,6 +214,7 @@
                         <outlet property="beerLeftLabel" destination="A1u-Px-bfg" id="auA-Fo-Iyn"/>
                         <outlet property="beerNameLabel" destination="DJM-4z-V1K" id="67V-MU-hkG"/>
                         <outlet property="beerTypeLabel" destination="e9v-tV-NOi" id="GST-pD-6MV"/>
+                        <outlet property="buyBeerButton" destination="S6U-IG-PGQ" id="DLc-1Z-W6D"/>
                         <outlet property="selectBeerVolumeSegmentControl" destination="8PI-eP-6IE" id="94p-ea-r0Z"/>
                     </connections>
                 </viewController>
