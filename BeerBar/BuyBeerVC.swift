@@ -16,10 +16,9 @@ class BuyBeerVC: UIViewController {
     // MARK: - Outlets
     
     @IBOutlet weak var beerNameLabel: UILabel!
-    
     @IBOutlet weak var beerTypeLabel: UILabel!
-    
     @IBOutlet weak var beerLeftLabel: UILabel!
+    @IBOutlet weak var beerImageView: UIImageView!
     
     // MARK: - View Lifecycle
     

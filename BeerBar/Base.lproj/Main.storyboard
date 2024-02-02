@@ -66,7 +66,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Wd8-Bb-mda">
-                                <rect key="frame" x="0.0" y="103" width="393" height="141"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="407"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lwy-wp-5EC">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="69"/>
@@ -128,6 +128,24 @@
                                             <constraint firstAttribute="bottom" secondItem="A1u-Px-bfg" secondAttribute="bottom" constant="8" id="jl9-BL-57Y"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k2h-XE-9Iu">
+                                        <rect key="frame" x="0.0" y="141" width="393" height="266"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Bpb-bb-1Ka">
+                                                <rect key="frame" x="71.666666666666686" y="9.6666666666666572" width="250" height="246.99999999999997"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="250" id="Es6-uC-elW"/>
+                                                    <constraint firstAttribute="width" secondItem="Bpb-bb-1Ka" secondAttribute="height" id="qR2-Aw-KBD"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="Bpb-bb-1Ka" firstAttribute="centerX" secondItem="k2h-XE-9Iu" secondAttribute="centerX" id="15u-Zy-tvD"/>
+                                            <constraint firstItem="Bpb-bb-1Ka" firstAttribute="top" secondItem="k2h-XE-9Iu" secondAttribute="top" constant="8" id="D6P-OA-knw"/>
+                                            <constraint firstAttribute="bottom" secondItem="Bpb-bb-1Ka" secondAttribute="bottom" constant="8" id="gJr-u0-4np"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -141,6 +159,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Buy Beer" id="VoB-yE-IiO"/>
                     <connections>
+                        <outlet property="beerImageView" destination="Bpb-bb-1Ka" id="d9d-Mb-7Hj"/>
                         <outlet property="beerLeftLabel" destination="A1u-Px-bfg" id="auA-Fo-Iyn"/>
                         <outlet property="beerNameLabel" destination="DJM-4z-V1K" id="67V-MU-hkG"/>
                         <outlet property="beerTypeLabel" destination="e9v-tV-NOi" id="GST-pD-6MV"/>
@@ -431,6 +450,7 @@ $0.00</string>
         <image name="menucard.fill" catalog="system" width="105" height="128"/>
         <image name="person.2.badge.gearshape" catalog="system" width="128" height="91"/>
         <image name="person.2.badge.gearshape.fill" catalog="system" width="128" height="90"/>
+        <image name="photo" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
