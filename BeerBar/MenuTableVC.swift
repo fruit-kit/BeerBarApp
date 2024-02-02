@@ -84,6 +84,7 @@ class MenuTableVC: UITableViewController {
         let index = indexPath.row
         
         destination.defaultBeerInfo.country = self.beers[index].country
+        destination.defaultBeerInfo.name = self.beers[index].name
         
         self.navigationController?.pushViewController(destination, animated: true)
     }

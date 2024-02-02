@@ -9,7 +9,7 @@ import UIKit
 
 struct Beer {
     
-    let name: String
+    var name: String
     var country: String
     let type: BeerType
     let prices: (Decimal, Decimal, Decimal)
