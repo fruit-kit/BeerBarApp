@@ -10,7 +10,7 @@ import UIKit
 struct Beer {
     
     let name: String
-    let country: String
+    var country: String
     let type: BeerType
     let prices: (Decimal, Decimal, Decimal)
     let image: UIImage?
