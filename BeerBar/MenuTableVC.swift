@@ -34,6 +34,7 @@ class MenuTableVC: UITableViewController {
     override func viewDidLoad() {
         
         registerCustomCell()
+        
         super.viewDidLoad()
     }
     
@@ -42,6 +43,7 @@ class MenuTableVC: UITableViewController {
     private func registerCustomCell() {
         
         let cellNib = UINib(nibName: "TableViewCell", bundle: Bundle.main)
+        
         self.tableView.register(cellNib, forCellReuseIdentifier: "TableViewCell")
     }
     
@@ -66,6 +68,7 @@ class MenuTableVC: UITableViewController {
         let index = indexPath.row
         
         cell.beerNameLabel.text = "\(self.beers[index].country) \(self.beers[index].name)"
+        
         cell.beerLeftLabel.text = "Remainder: \(self.beers[index].volume) L"
         
         return cell
@@ -84,10 +87,15 @@ class MenuTableVC: UITableViewController {
         let index = indexPath.row
         
         destination.defaultBeerInfo.country = self.beers[index].country
+        
         destination.defaultBeerInfo.name = self.beers[index].name
+        
         destination.defaultBeerInfo.type = self.beers[index].type
+        
         destination.defaultBeerInfo.volume = self.beers[index].volume
+        
         destination.defaultBeerInfo.image = self.beers[index].image
+        
         destination.defaultBeerInfo.prices = self.beers[index].prices
         
         self.navigationController?.pushViewController(destination, animated: true)

@@ -12,9 +12,13 @@ class StaffManagementVC: UIViewController {
     // MARK: - Outlets
     
     @IBOutlet weak var todayRevenueLabel: UILabel!
+    
     @IBOutlet weak var newShiftButton: UIButton!
+    
     @IBOutlet weak var totalRevenueLabel: UILabel!
+    
     @IBOutlet weak var resetButton: UIButton!
+    
     @IBOutlet weak var aboutDeveloperButton: UIButton!
     
     // MARK: - View Lifecycle
@@ -22,7 +26,9 @@ class StaffManagementVC: UIViewController {
     override func viewDidLoad() {
         
         setupLabels()
+        
         setupButtons()
+        
         super.viewDidLoad()
     }
     
@@ -31,6 +37,7 @@ class StaffManagementVC: UIViewController {
     private func setupLabels() {
         
         setupTodayRevenueLabel()
+        
         setupTotalRevenueLabel()
     }
 
@@ -47,7 +54,9 @@ class StaffManagementVC: UIViewController {
     private func setupButtons() {
         
         setupNewShiftButton()
+        
         setupResetButton()
+        
         setupAboutDeveloperButton()
     }
 

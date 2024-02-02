@@ -10,10 +10,15 @@ import UIKit
 struct Beer {
     
     var name: String
+    
     var country: String
+    
     var type: BeerType
+    
     var prices: (Decimal, Decimal, Decimal)
+    
     var image: UIImage?
+    
     var volume: Double
 }
 
