@@ -19,6 +19,7 @@ class BuyBeerVC: UIViewController {
     @IBOutlet weak var beerTypeLabel: UILabel!
     @IBOutlet weak var beerLeftLabel: UILabel!
     @IBOutlet weak var beerImageView: UIImageView!
+    @IBOutlet weak var selectBeerVolumeSegmentControl: UISegmentedControl!
     
     // MARK: - View Lifecycle
     
@@ -27,9 +28,16 @@ class BuyBeerVC: UIViewController {
         setupBeerNameLabel()
         setupBeerTypeLabel()
         setupBeerLeftLabel()
+        setupSelectBeerVolumeSegmentControl()
         super.viewDidLoad()
     }
-
+    
+    // MARK: - Actions
+    
+    @IBAction func selectBeerVolumePressed(_ sender: UISegmentedControl) {
+        
+    }
+    
     // MARK: - Private Methods
     
     private func setupBeerNameLabel() {
@@ -48,6 +56,13 @@ class BuyBeerVC: UIViewController {
         
         self.beerLeftLabel.text = "Remainder: \(self.defaultBeerInfo.volume) L"
         self.beerLeftLabel.font = .systemFont(ofSize: 18)
+    }
+    
+    private func setupSelectBeerVolumeSegmentControl() {
+        
+        self.selectBeerVolumeSegmentControl.setTitle("0.33 L", forSegmentAt: 0)
+        self.selectBeerVolumeSegmentControl.setTitle("0.5 L", forSegmentAt: 1)
+        self.selectBeerVolumeSegmentControl.setTitle("1 L", forSegmentAt: 2)
     }
     
 }

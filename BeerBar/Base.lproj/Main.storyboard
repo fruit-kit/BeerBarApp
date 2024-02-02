@@ -66,7 +66,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Wd8-Bb-mda">
-                                <rect key="frame" x="0.0" y="103" width="393" height="407"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="468"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lwy-wp-5EC">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="69"/>
@@ -146,7 +146,35 @@
                                             <constraint firstAttribute="bottom" secondItem="Bpb-bb-1Ka" secondAttribute="bottom" constant="8" id="gJr-u0-4np"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iyU-VD-LmB">
+                                        <rect key="frame" x="0.0" y="407" width="393" height="61"/>
+                                        <subviews>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8PI-eP-6IE">
+                                                <rect key="frame" x="71.666666666666686" y="8" width="250" height="46"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="K0F-oq-d2F"/>
+                                                </constraints>
+                                                <segments>
+                                                    <segment title="0.33 L"/>
+                                                    <segment title="0.5 L"/>
+                                                    <segment title="1 L"/>
+                                                </segments>
+                                                <connections>
+                                                    <action selector="selectBeerVolumePressed:" destination="MGB-b1-Qvm" eventType="valueChanged" id="FFa-Fr-ORW"/>
+                                                </connections>
+                                            </segmentedControl>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="8PI-eP-6IE" secondAttribute="bottom" constant="8" id="5IG-he-czd"/>
+                                            <constraint firstItem="8PI-eP-6IE" firstAttribute="centerX" secondItem="iyU-VD-LmB" secondAttribute="centerX" id="PG1-Y4-nL3"/>
+                                            <constraint firstItem="8PI-eP-6IE" firstAttribute="top" secondItem="iyU-VD-LmB" secondAttribute="top" constant="8" id="XkA-eT-yNn"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="8PI-eP-6IE" firstAttribute="width" secondItem="Bpb-bb-1Ka" secondAttribute="width" id="Mou-jq-ib7"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dZW-Nt-V52"/>
@@ -163,6 +191,7 @@
                         <outlet property="beerLeftLabel" destination="A1u-Px-bfg" id="auA-Fo-Iyn"/>
                         <outlet property="beerNameLabel" destination="DJM-4z-V1K" id="67V-MU-hkG"/>
                         <outlet property="beerTypeLabel" destination="e9v-tV-NOi" id="GST-pD-6MV"/>
+                        <outlet property="selectBeerVolumeSegmentControl" destination="8PI-eP-6IE" id="94p-ea-r0Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eZH-V3-Yat" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
