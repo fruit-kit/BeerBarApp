@@ -13,7 +13,7 @@ class BuyBeerVC: UIViewController {
     
     var defaultBeerInfo: Beer = Beer(name: "Name N/A", country: "Country N/A", type: BeerType.dark, prices: (0.0, 0.0, 0.0), image: UIImage(named: "no-image-icon"), volume: 0.0)
     
-    var currentBeerVolume: Double = 0.33
+    private var currentBeerVolume: Double = 0.33
     
     // MARK: - Outlets
     
@@ -34,6 +34,8 @@ class BuyBeerVC: UIViewController {
     // MARK: - View Lifecycle
     
     override func viewDidLoad() {
+        
+        updateDefaultBeerInfo()
 
         setupBeerNameLabel()
         
@@ -90,6 +92,13 @@ class BuyBeerVC: UIViewController {
     }
     
     // MARK: - Private Methods
+    
+    private func updateDefaultBeerInfo() {
+        
+        if let selectedBeer = BeerManager.shared.selectedBeer {
+            self.defaultBeerInfo = selectedBeer
+        }
+    }
     
     private func setupBeerNameLabel() {
         
