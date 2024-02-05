@@ -18,13 +18,6 @@ class MenuTableVC: UITableViewController {
         super.viewDidLoad()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        
-        self.tableView.reloadData()
-        
-        super.viewWillAppear(animated)
-    }
-    
     // MARK: - Private Methods
     
     private func registerCustomCell() {
@@ -71,6 +64,8 @@ class MenuTableVC: UITableViewController {
             return
         }
         
+        destination.delegate = self
+        
         let index = indexPath.row
         
         BeerManager.shared.selectedBeerIndex = index
@@ -78,6 +73,19 @@ class MenuTableVC: UITableViewController {
         BeerManager.shared.selectedBeer = BeerManager.shared.beers[index]
         
         self.navigationController?.pushViewController(destination, animated: true)
+    }
+    
+}
+
+// MARK: - Extensions
+
+// MARK: Delegates
+
+extension MenuTableVC: BuyBeerDelegate {
+    
+    func updateTableView() {
+        
+        self.tableView.reloadData()
     }
     
 }

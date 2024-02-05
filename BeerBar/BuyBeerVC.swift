@@ -17,6 +17,8 @@ class BuyBeerVC: UIViewController {
     
     var currentBeerIndex = 0
     
+    weak var delegate: BuyBeerDelegate?
+    
     // MARK: - Outlets
     
     @IBOutlet weak var beerNameLabel: UILabel!
@@ -70,12 +72,15 @@ class BuyBeerVC: UIViewController {
         switch sender.selectedSegmentIndex {
         case 0:
             self.currentPriceVolumeLabel.text = "Price: $\(self.defaultBeerInfo.prices.0)"
+            
             self.currentBeerVolume = 0.33
         case 1:
             self.currentPriceVolumeLabel.text = "Price: $\(self.defaultBeerInfo.prices.1)"
+            
             self.currentBeerVolume = 0.5
         case 2:
             self.currentPriceVolumeLabel.text = "Price: $\(self.defaultBeerInfo.prices.2)"
+            
             self.currentBeerVolume = 1
         default:
             break
@@ -87,9 +92,12 @@ class BuyBeerVC: UIViewController {
     @IBAction func buyBeerButtonPressed(_ sender: UIButton) {
         
         self.defaultBeerInfo.volume -= self.currentBeerVolume
+        
         BeerManager.shared.beers[currentBeerIndex].volume -= self.currentBeerVolume
         
         self.beerLeftLabel.text = "Remainder: \(self.defaultBeerInfo.volume) L"
+        
+        self.delegate?.updateTableView()
         
         chekBeerVolume()
     }
@@ -100,7 +108,9 @@ class BuyBeerVC: UIViewController {
         
         if let selectedBeer = BeerManager.shared.selectedBeer,
            let selectedBeerIndex = BeerManager.shared.selectedBeerIndex {
+            
             self.defaultBeerInfo = selectedBeer
+            
             self.currentBeerIndex = selectedBeerIndex
         }
     }
