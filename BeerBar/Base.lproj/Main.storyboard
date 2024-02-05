@@ -373,7 +373,6 @@ $0.00</string>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="About Developer"/>
                                 <connections>
-                                    <action selector="aboutDeveloperButtonPressed:" destination="his-NB-Lvx" eventType="touchUpInside" id="mk3-vZ-yOu"/>
                                     <segue destination="6jU-eb-rnT" kind="show" id="e8A-Uw-g8B"/>
                                 </connections>
                             </button>

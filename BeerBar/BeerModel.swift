@@ -20,9 +20,11 @@ struct Beer {
     var image: UIImage?
     
     var volume: Double
+    
 }
 
 enum BeerType {
     
     case light, dark
+    
 }

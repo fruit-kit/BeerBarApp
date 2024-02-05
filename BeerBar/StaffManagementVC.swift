@@ -25,11 +25,16 @@ class StaffManagementVC: UIViewController {
     
     override func viewDidLoad() {
         
-        setupLabels()
-        
         setupButtons()
         
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        setupLabels()
+        
+        super.viewWillAppear(animated)
     }
     
     // MARK: - Private Methods
@@ -43,12 +48,12 @@ class StaffManagementVC: UIViewController {
 
     private func setupTodayRevenueLabel() {
         
-        todayRevenueLabel.text = "Today's Revenue: \n$0.00"
+        todayRevenueLabel.text = "Today's Revenue: \n$\(BeerManager.shared.todayRevenue)"
     }
 
     private func setupTotalRevenueLabel() {
         
-        totalRevenueLabel.text = "Total Revenue: \n$0.00"
+        totalRevenueLabel.text = "Total Revenue: \n$\(BeerManager.shared.totalRevenue)"
     }
     
     private func setupButtons() {
@@ -79,14 +84,24 @@ class StaffManagementVC: UIViewController {
     
     @IBAction func newShiftButtonPressed(_ sender: UIButton) {
         
+        BeerManager.shared.totalRevenue += BeerManager.shared.todayRevenue
+        
+        BeerManager.shared.todayRevenue = 0
+        
+        setupTotalRevenueLabel()
+        
+        setupTodayRevenueLabel()
     }
     
     @IBAction func resetButtonPressed(_ sender: UIButton) {
         
-    }
-    
-    @IBAction func aboutDeveloperButtonPressed(_ sender: UIButton) {
+        BeerManager.shared.todayRevenue = 0
         
+        BeerManager.shared.totalRevenue = 0
+        
+        setupTodayRevenueLabel()
+        
+        setupTotalRevenueLabel()
     }
     
 }

@@ -15,6 +15,8 @@ class BuyBeerVC: UIViewController {
     
     private var currentBeerVolume: Double = 0.33
     
+    private var currentPriceBeerVolume: Decimal = 0.0
+    
     var currentBeerIndex = 0
     
     weak var delegate: BuyBeerDelegate?
@@ -60,6 +62,8 @@ class BuyBeerVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
+        self.currentPriceBeerVolume = self.defaultBeerInfo.prices.0
+        
         chekBeerVolume()
         
         super.viewWillAppear(animated)
@@ -74,14 +78,20 @@ class BuyBeerVC: UIViewController {
             self.currentPriceVolumeLabel.text = "Price: $\(self.defaultBeerInfo.prices.0)"
             
             self.currentBeerVolume = 0.33
+            
+            self.currentPriceBeerVolume = self.defaultBeerInfo.prices.0
         case 1:
             self.currentPriceVolumeLabel.text = "Price: $\(self.defaultBeerInfo.prices.1)"
             
             self.currentBeerVolume = 0.5
+            
+            self.currentPriceBeerVolume = self.defaultBeerInfo.prices.1
         case 2:
             self.currentPriceVolumeLabel.text = "Price: $\(self.defaultBeerInfo.prices.2)"
             
             self.currentBeerVolume = 1
+            
+            self.currentPriceBeerVolume = self.defaultBeerInfo.prices.2
         default:
             break
         }
@@ -90,6 +100,8 @@ class BuyBeerVC: UIViewController {
     }
     
     @IBAction func buyBeerButtonPressed(_ sender: UIButton) {
+        
+        BeerManager.shared.todayRevenue += self.currentPriceBeerVolume
         
         self.defaultBeerInfo.volume -= self.currentBeerVolume
         

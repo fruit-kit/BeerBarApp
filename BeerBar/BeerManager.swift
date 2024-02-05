@@ -17,6 +17,10 @@ class BeerManager {
     
     var selectedBeerIndex: Int?
     
+    var todayRevenue: Decimal = 0.0
+    
+    var totalRevenue: Decimal = 0.0
+    
     var beers: [Beer] = [
         Beer(name: "Firestone Walker Old Man Hattan", country: "🇺🇸", type: BeerType.dark, prices: (9.99, 14.99, 24.99), image: UIImage(named: "firestone-walker-old-man-hattan-icon"), volume: 100),
         Beer(name: "CBS", country: "🇨🇦", type: BeerType.dark, prices: (9.99, 14.99, 24.99), image: UIImage(named: "cbs-icon"), volume: 100),
