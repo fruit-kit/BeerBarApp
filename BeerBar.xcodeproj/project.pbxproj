@@ -53,6 +53,69 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC470E5D2B71FCB9002E4A85 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CC96D1832B5EA56200B5D46C /* AppDelegate.swift */,
+				CC96D1852B5EA56200B5D46C /* SceneDelegate.swift */,
+				CC96D1912B5EA56300B5D46C /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		CC470E5E2B71FD0F002E4A85 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CC2933222B691EBF00B199CD /* MenuTableVC.swift */,
+				CC470E572B6A5585002E4A85 /* BuyBeerVC.swift */,
+				CC96D1972B5EA7B100B5D46C /* StaffManagementVC.swift */,
+				CC09B2C92B65212100ED9D6A /* DeveloperInfoVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CC470E5F2B71FD9E002E4A85 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CC29332E2B69505700B199CD /* TableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CC470E602B71FDCD002E4A85 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CC470E552B6A34DB002E4A85 /* BeerModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CC470E612B71FE02002E4A85 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				CC470E592B6E324C002E4A85 /* BeerManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		CC470E622B71FE24002E4A85 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CC470E5B2B70AB68002E4A85 /* BuyBeerDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		CC470E632B71FE5A002E4A85 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CC96D1892B5EA56200B5D46C /* Main.storyboard */,
+				CC29332F2B69505700B199CD /* TableViewCell.xib */,
+				CC96D18E2B5EA56300B5D46C /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		CC96D1772B5EA56200B5D46C = {
 			isa = PBXGroup;
 			children = (
@@ -72,21 +135,14 @@
 		CC96D1822B5EA56200B5D46C /* BeerBar */ = {
 			isa = PBXGroup;
 			children = (
-				CC96D1832B5EA56200B5D46C /* AppDelegate.swift */,
-				CC96D1852B5EA56200B5D46C /* SceneDelegate.swift */,
-				CC2933222B691EBF00B199CD /* MenuTableVC.swift */,
-				CC96D1972B5EA7B100B5D46C /* StaffManagementVC.swift */,
-				CC09B2C92B65212100ED9D6A /* DeveloperInfoVC.swift */,
-				CC470E572B6A5585002E4A85 /* BuyBeerVC.swift */,
-				CC29332E2B69505700B199CD /* TableViewCell.swift */,
-				CC470E552B6A34DB002E4A85 /* BeerModel.swift */,
-				CC470E592B6E324C002E4A85 /* BeerManager.swift */,
-				CC470E5B2B70AB68002E4A85 /* BuyBeerDelegate.swift */,
-				CC96D1892B5EA56200B5D46C /* Main.storyboard */,
-				CC29332F2B69505700B199CD /* TableViewCell.xib */,
+				CC470E5D2B71FCB9002E4A85 /* App */,
+				CC470E5E2B71FD0F002E4A85 /* ViewControllers */,
+				CC470E5F2B71FD9E002E4A85 /* Views */,
+				CC470E602B71FDCD002E4A85 /* Models */,
+				CC470E612B71FE02002E4A85 /* Managers */,
+				CC470E622B71FE24002E4A85 /* Protocols */,
+				CC470E632B71FE5A002E4A85 /* Resources */,
 				CC96D18C2B5EA56300B5D46C /* Assets.xcassets */,
-				CC96D18E2B5EA56300B5D46C /* LaunchScreen.storyboard */,
-				CC96D1912B5EA56300B5D46C /* Info.plist */,
 			);
 			path = BeerBar;
 			sourceTree = "<group>";
@@ -326,7 +382,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9PUAYTQL85;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BeerBar/Info.plist;
+				INFOPLIST_FILE = BeerBar/App/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Billy Bar";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -355,7 +411,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9PUAYTQL85;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BeerBar/Info.plist;
+				INFOPLIST_FILE = BeerBar/App/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Billy Bar";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
